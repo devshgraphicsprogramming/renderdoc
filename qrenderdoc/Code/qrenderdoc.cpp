@@ -39,13 +39,6 @@
 #include "Windows/MainWindow.h"
 #include "version.h"
 
-#if defined(Q_OS_WIN32)
-extern "C" {
-_declspec(dllexport) unsigned long NvOptimusEnablement = 0x00000001;
-_declspec(dllexport) int AmdPowerXpressRequestHighPerformance = 1;
-}
-#endif
-
 REPLAY_PROGRAM_MARKER()
 
 void sharedLogOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
